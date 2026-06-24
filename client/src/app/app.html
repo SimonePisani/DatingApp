@@ -1,0 +1,16 @@
+
+<div class="card card-bordered w-1/2 bg-base-100 mx-auto p-10 mt-10 shadow-xl">
+    <div class="card-body">
+        <h2 class="card-title">Welcome to {{title}}!</h2>
+        <ul class="list">
+            @for (member of members(); track member.Id) {
+                <li class="list-row items-center">
+                    <img class="size-12 rounded" src="/user.png" alt="{{member.displayedName}}'s avatar" />
+                    <div>
+                        {{member.displayedName}}
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
